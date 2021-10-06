@@ -1,0 +1,23 @@
+
+def insertionsort(My_List):
+  for i in range(len(My_List)): 
+    curr = My_List[i] 
+    j = i-1
+    while j >= 0 and curr < My_List[j] : 
+      My_List[j + 1] = My_List[j]
+      My_List[j] = curr
+      j = j - 1
+
+def PrintList(My_List):
+  for i in My_List:
+    print(i, end=" ")
+  print("\n")
+  
+                
+My_List = [100, 170, 283, 540, 14, 779, -44]
+print("Original List")
+PrintList(My_List)
+
+insertionsort(My_List)
+print("Sorted List")
+PrintList(M_yList)
